@@ -1,0 +1,17 @@
+{
+  "Name": [{ "First": "Justin", "Last": "Prather"}],
+  "password": "bananas",
+  "Pledge_Year": "2012",
+  "Nationality": "CAN",
+  "Slogan": "i like bacon",
+  "Status": "active"
+}
+
+{
+  "Name": [{ "First": "Dave", "Last": "Liu"}],
+  "password": "apples",
+  "Pledge_Year": "2010",
+  "Nationality": "awesome",
+  "Slogan": "i like turtles",
+  "Status": "active"
+}
