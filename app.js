@@ -26,6 +26,7 @@ db.once('open', function callback() {
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hjs');
+//app.locals.deliminiters = '<%%>';
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));

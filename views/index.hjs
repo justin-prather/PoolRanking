@@ -1,15 +1,56 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>{{ title }}</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    {{={{{}}}=}}
-    <h1>{{ title }}</h1>
-    <p>Welcome to {{ title }}</p>
-    <template>
-    <p>{{ test }}</p>
-    </template>
-  </body>
+
+<head>
+  {{=[[ ]]=}}
+  <title>[[ title ]]</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap -->
+  <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
+
+</head>
+
+<body class="col-md-8">
+
+  <h1>[[ title ]]</h1>
+  <p>Welcome to [[ title ]]</p>
+
+  <table class="table table-hover">
+
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Wins</th>
+        <th>Losses</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>Justin</td>
+        <td>Prather</td>
+        <td>5</td>
+        <td>0</td>
+      </tr>
+
+      <tr>
+        <td>Justin</td>
+        <td>Prather</td>
+        <td>5</td>
+        <td>0</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <p>[[paragraph]]</p>
+  <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+</body>
+
 </html>
