@@ -1,5 +1,6 @@
 {
-  "Name": [{ "First": "Justin", "Last": "Prather"}],
+  "Name_First": "Justin",
+  "Name_Last": "Prather",
   "password": "bananas",
   "Pledge_Year": "2012",
   "Nationality": "CAN",

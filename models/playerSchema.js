@@ -2,7 +2,8 @@ var mongoose = require("mongoose");
 var schema = mongoose.Schema;
 
 var playerSchema = new schema({
-	Name: [{ First: String, Last: String}],
+	Name_First: String,
+	Name_Last: String,
 	Wins: { type: Number, default: 0 },
 	Loses: { type: Number, default: 0 },
 	elo_rank: { type: Number, default: 1400 },
