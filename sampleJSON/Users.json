@@ -9,7 +9,8 @@
 }
 
 {
-  "Name": [{ "First": "Dave", "Last": "Liu"}],
+  "Name_First": "Dave",
+  "Name_Last": "Liu",
   "password": "apples",
   "Pledge_Year": "2010",
   "Nationality": "awesome",
