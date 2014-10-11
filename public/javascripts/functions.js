@@ -14,6 +14,4 @@ $(function(){
       $spinner.addClass(".hidden");
     }
   });
-
-  
 });
