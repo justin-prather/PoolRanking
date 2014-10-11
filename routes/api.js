@@ -11,7 +11,7 @@ router.get('/', function(req, res) {
 });
 
 router.get('/player', function(req, res) {
-	mongoose.model("player").find(function(err, players){
+	mongoose.model("player").find().sort('-elo_rank -Wins Loses').exec(function(err, players){
 	res.json( players );
 	})
 } );
