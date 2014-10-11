@@ -17,3 +17,13 @@
   "Slogan": "i like turtles",
   "Status": "active"
 }
+
+{
+  "Name_First": "Brad",
+  "Name_Last": "Prather",
+  "password": "bananas",
+  "Pledge_Year": "2012",
+  "Nationality": "CAN",
+  "Slogan": "i like bacon",
+  "Status": "active"
+}
