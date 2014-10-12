@@ -1,4 +1,4 @@
-$(function() {
+$(document).ready(function() {
   var $table = $('#table-body');
   var table_template = $('#table-entry-template').html();
   var $spinner = $('.spinner');

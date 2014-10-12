@@ -22,10 +22,17 @@
     <div class="row">
       <div class="col-md-2"></div>
       <div class="col-md-8">
-        <div id="player-head" class="slider">
+        <div id="player-head" class="slider border">
           New Player
           <br>
-          <div id="player-form">HeeBeeJeeBee</div>
+          <div id="player-form">
+            <form role="form">
+              <div class="form-group">
+                <label for="first-name">First Name</label>
+                <input type="text" class="form-control" id="first-name">
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
@@ -33,7 +40,7 @@
     <div class="row">
       <div class="col-md-2"></div>
       <div class="col-md-8">
-        <div id="match-head" class="slider">
+        <div id="match-head" class="slider border">
           New Match
           <br>
           <div id="match-form">HeeBeeJeeBee</div>
