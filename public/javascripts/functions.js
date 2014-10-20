@@ -2,6 +2,10 @@ $(document).ready(function() {
   var $table = $('#table-body');
   var table_template = $('#table-entry-template').html();
   var $spinner = $('.spinner');
+  var $firstName = $('#first-name');
+  var $lastName = $('#last-name');
+  var $winner = $('#winner');
+  var $looser = $('#looser');
 
   $.ajax({
     type: 'GET',
@@ -14,9 +18,7 @@ $(document).ready(function() {
       $spinner.addClass(".hidden");
     }
   });
-});
 
-$(function() {
   $(".slider").click(function(event) {
     if (event.target.id == "player-head") {
       if (!$("#player-form").hasClass("show")) {
@@ -37,4 +39,37 @@ $(function() {
       }
     }
   });
+
+  $("#submit-player").on('click', function(){
+      var player = {
+        Name_First: $firstName.val(),
+        Name_Last: $lastName.val(),
+      };
+
+      $.ajax({
+        type: 'POST',
+        url: '/player',
+        data: player,
+        success: function(NewPlayer) {
+          console.log(NewPlayer);
+        }
+      });
+  });
+
+  $("#submit-match").on('click', function(){
+      var match = {
+        Winner: $winner.val(),
+        Looser: $looser.val(),
+      };
+
+      $.ajax({
+        type: 'POST',
+        url: '/match',
+        data: match,
+        success: function(NewMatch) {
+          console.log(NewMatch);
+        }
+      });
+  });
+
 });
