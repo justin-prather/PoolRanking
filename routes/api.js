@@ -7,7 +7,8 @@ require( __dirname + '/../models/matchSchema.js');
 
 /* GET home page. */
 router.get('/', function(req, res) {
-  res.render('index', { title: "Hello", paragraph: "who cares" });
+  res.render('index', { title: "Psi U Pool", paragraph: "An \"I'd Prather Not\" Production",
+                    header: "If you seed matches, the goons will find you!"});
 });
 
 router.get('/player', function(req, res) {

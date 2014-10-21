@@ -1,17 +1,20 @@
 $(document).ready(function() {
   var $table = $('#table-body');
   var table_template = $('#table-entry-template').html();
+  var dropdown_template = $('#dropdown-template').html();
   var $spinner = $('.spinner');
   var $firstName = $('#first-name');
   var $lastName = $('#last-name');
-  var $winner = $('#winner');
-  var $looser = $('#looser');
+  var $winner = $('#Winner');
+  var $looser = $('#Looser');
 
   $.ajax({
     type: 'GET',
     url: '/player',
     success: function(players) {
       $.each(players, function(i, player) {
+        $winner.append(Mustache.render( dropdown_template, player));
+        $looser.append(Mustache.render( dropdown_template, player));
         $table.append(Mustache.render(table_template, player));
       });
 
@@ -51,7 +54,7 @@ $(document).ready(function() {
         url: '/player',
         data: player,
         success: function(NewPlayer) {
-          console.log(NewPlayer);
+          location.reload();
         }
       });
   });
@@ -67,7 +70,7 @@ $(document).ready(function() {
         url: '/match',
         data: match,
         success: function(NewMatch) {
-          console.log(NewMatch);
+          location.reload();
         }
       });
   });

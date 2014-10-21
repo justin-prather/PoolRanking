@@ -4,20 +4,26 @@
 <head>
   {{=[[ ]]=}}
   <title>[[ title ]]</title>
-  <link rel='stylesheet' href='/stylesheets/style.css' />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Bootstrap -->
   <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
   <link href="/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
-
+  <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 
 <body class="text-center">
-  <h1>[[ title ]]</h1>
-  <p>Welcome [[ title ]]</p>
 
   <div class="container">
+    <div class="row">
+      <div class="col-md-2"></div>
+    <h1 class="">[[ title ]]</h1>
+  </div>
+
+  <div class="row">
+    <div class="col-md-2"></div>
+    <h2 class="">[[ header ]]</h2>
+  </div>
 
     <div class="row">
       <div class="col-md-2"></div>
@@ -64,10 +70,10 @@
               <div class="form-group">
                 <div class="input-group">
                   <div class="input-group-addon">Winner</div>
-                  <label for="first-name" class="sr-only">Winner</label>
+                  <label for="Winner" class="sr-only">Winner</label>
                   <select type="text" class="form-control" id="Winner">
                     <template id="dropdown-template">
-                      <option value="{{elo_rank}}">{{Name_First}} {{Name_Last}}</option>
+                      <option value="{{_id}}">{{Name_First}} {{Name_Last}}</option>
                     </template>
                   </select>
                 </div>
@@ -76,8 +82,8 @@
               <div class="form-group">
                 <div class="input-group">
                   <div class="input-group-addon">Looser</div>
-                  <label for="last-name" class="sr-only">Looser</label>
-                  <input type="text" class="form-control" id="Looser">
+                  <label for="Winner" class="sr-only">Looser</label>
+                  <select type="text" class="form-control" id="Looser"></select>
                 </div>
               </div>
 
@@ -100,6 +106,7 @@
               <th>Last Name</th>
               <th>Wins</th>
               <th>Losses</th>
+              <th>Rank</th>
             </tr>
           </thead>
 
@@ -111,6 +118,7 @@
                 <td>{{Name_Last}}</td>
                 <td>{{Wins}}</td>
                 <td>{{Loses}}</td>
+                <td>{{elo_rank}}</td>
               </tr>
             </template>
 
@@ -127,8 +135,12 @@
       <div class="col-md-2"></div>
     </div>
 
+    <div class="row">
+      <div class="col-md-2"></div>
+      <p>[[paragraph]]</p>
+    </div>
   </div>
-  <p>[[paragraph]]</p>
+
   <script src="/bower_components/jquery/dist/jquery.js"></script>
   <script src="/bootstrap/js/bootstrap.min.js"></script>
   <script src="/bower_components/mustache/mustache.js"></script>
