@@ -75,4 +75,10 @@ $(document).ready(function() {
       });
   });
 
+  $("table").delegate('tr', 'click', function(event) {
+      var parent = $(event.target).parent();
+      alert(parent.id);
+      //get <td> element values here!!??
+  });
+
 });
